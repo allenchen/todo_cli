@@ -41,9 +41,9 @@ There is a simple "language" to creating tasks. @ for time estimates (I
 use 30 min blocks), # for labels, {DATE} for due dates. It doesn't
 matter what order you specify these things. If unspecified, date defaults to "today".
 
-eg. "Email Bob back about project #freelance @1 {today}"
+eg. `"Email Bob back about project #freelance @1 {today}"`
 
-eg. "@2 #school {2012-8-20} Track down memory leaks in my code"
+eg. `"@2 #school {2012-8-20} Track down memory leaks in my code"`
 
 `todo ls` lists the current tasks (top is today, then incomplete). After
 you run this command, each task is identified by a number. You can then
