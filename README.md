@@ -27,7 +27,7 @@ You need to create a `settings.py` file with two constants,
 `MONGODB_URI` and `DB_NAMNE`.
 [Explanation](https://github.com/mongolab/mongodb-driver-examples/blob/master/python/pymongo_simple_example.py).
 
-You also need to install some external packages I used ``pip install
+You also need to install some external packages I used `sudo pip install
 parsedatetime, termcolor`
 
 If you want some other kind of backend (eg. REST), you can add it by
