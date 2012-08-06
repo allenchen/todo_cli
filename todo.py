@@ -111,7 +111,7 @@ def list_done(params):
     print
     mapper = {}
     completed = task_store.get_completed_tasks()
-    completed = sorted(completed, reversed=True, key=lambda x: (parse_date(x['due']), x['text'].lower()))
+    completed = sorted(completed, reverse=True, key=lambda x: (parse_date(x['due']), x['text'].lower()))
     i = 0
     for task in completed:
         mapper[str(i)] = task["_id"]
@@ -191,7 +191,7 @@ def parse_options(args):
     action = args[0]
     params = args[1:]
     if action == "new":
-        create_new_task(params)
+        create_new_task(params, today=False)
     elif action == "newtoday" or action == "newt":
         create_new_task(params, today=True)
     elif action == "ls" or action == "list":
@@ -212,6 +212,21 @@ def parse_options(args):
         edit_notes(params, False)
     elif action == "view":
         edit_notes(params, True)
+    elif action == "help":
+        print_help()
+
+def print_help():
+    print "new <task_str>\n\t create a new task"
+    print "newtoday <task_str>\n\t create a new task for today (shorthand: newt)"
+    print "list\n\t list tasks (shorthand: ls)"
+    print "pomo <task_num> <n>\n\t record n timeunits spent no <task_num>, default n=1"
+    print "today <task_nums>\n\t move one or more tasks to the today section, split by space"
+    print "later <task_nums>\n\t move one or more tasks out of the today section, split by space"
+    print "done <task_nums>\n\t mark one or more tasks ask done, split by space"
+    print "del <task_num>\n\t delete task, any key to confirm, ctrl+c or ctrl+d to quit"
+    print "old\n\t show completed tasks"
+    print "edit <task_num>\n\t edit notes for task in text editor, any key to confirm save after quitting"
+    print "view <task_num>\n\t view notes for task"
 
 if __name__ == "__main__":
     parse_options(sys.argv[1:])

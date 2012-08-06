@@ -1,4 +1,4 @@
-# A cloud-based command-line todo app for hackers
+# A cloud-based command-line todo app for programmers
 
 I wanted a todo app with these qualities
 
