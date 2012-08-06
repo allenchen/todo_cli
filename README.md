@@ -1,16 +1,18 @@
 # A cloud-based command-line todo app for hackers
 
-I wanted a todo app that 
+I wanted a todo app with these qualities
 
 1. Was always synced
-2. No more clicking around in slow UIs on websites/phones. I wanted
-   something that was always available to me very quickly. Pull down my
-guake terminal, and I'm there.
+2. A fast UI. I want to spend less time managing my tasks, and more time
+   doing them.
 3. Allowed me to estimate how much time is required for each task &
    track time spent
 4. I like to go through my todos and pick what to get done at the start
    of the day. 
 
+Most apps either fell short on (2) or didn't have all of (1, 3, 4). So I
+figured I would build my own. I went with the fastest UI I could think
+of - none at all.
 
 ## Setup
 
