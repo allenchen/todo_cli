@@ -3,9 +3,9 @@
 I wanted a todo app that 
 
 1. Was always synced
-2. Could be used very quickly - no more clicking around calendar widgets
-   to pick due dates. I wanted something I could operate from the
-keyboard by quickly pulling down my guake terminal.
+2. No more clicking around in slow UIs on websites/phones. I wanted
+   something that was always available to me very quickly. Pull down my
+guake terminal, and I'm there.
 3. Allowed me to estimate how much time is required for each task &
    track time spent
 
@@ -14,12 +14,12 @@ keyboard by quickly pulling down my guake terminal.
 I decided to have my client directly interact with a MongoDB backend in
 the cloud, since that was the quickest way to get up and running.
 
-I personally use (Mongo Lab)[https://mongolab.com]'s 240MB free hosting
+I personally use [Mongo Lab](https://mongolab.com)'s 240MB free hosting
 to sync my todos.
 
 You need to create a `settings.py` file with two constants,
 `MONGODB_URI` and `DB_NAMNE`.
-(Explanation)[https://github.com/mongolab/mongodb-driver-examples/blob/master/python/pymongo_simple_example.py]
+[Explanation](https://github.com/mongolab/mongodb-driver-examples/blob/master/python/pymongo_simple_example.py)
 
 If you want some other kind of backend (eg. REST), you can add it by
 creating a new object that follows the interface of `MongoDataConnector`
